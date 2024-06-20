@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <form id="form" onsubmit="return validateForm()" action="welcome.html">
+            <!-- Section 1: Full Name -->
+            <div class="user-details">
+                <span class="details">Full Name</span>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" maxlength="50" required>
+            </div>
+            <!-- Section 2: Phone Number -->
+            <div class="user-details">
+                <span class="details">Phone Number</span>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number" maxlength="10" required pattern="\d{10}">
+            </div>
+            <!-- Section 3: Email -->
+            <div class="user-details">
+                <span class="details">Email</span>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Section 4: Age -->
+            <div class="age-details">
+                <span class="details">Select Your Age</span>
+                <div class="age">
+                    <input type="radio" name="age" id="age1" value="Below 18" required>
+                    <label for="age1">Below 18</label><br>
+                    <input type="radio" name="age" id="age2" value="18-60" required>
+                    <label for="age2">18 - 60</label><br>
+                    <input type="radio" name="age" id="age3" value="Above 60" required>
+                    <label for="age3">Above 60</label><br>
+                </div>
+            </div>
+            <!-- Section 5: Gender -->
+            <div class="gender-details">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <input type="radio" name="gender" id="male" value="Male" required>
+                    <label for="male">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <input type="radio" name="gender" id="female" value="Female" required>
+                    <label for="female">
+                        <span class="dot one"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <input type="radio" name="gender" id="preferNotToSay" value="Prefer not to say" required>
+                    <label for="preferNotToSay">
+                        <span class="dot one"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <!-- Section 6: Country -->
+            <div class="select-country">
+                <span class="select-country">Country</span>
+                <select name="country" id="countySel" required>
+                    <option value="" selected="selected">Please Select Country</option>
+                </select>
+            </div>
+            <!-- Section 7: State -->
+            <div class="select-country">
+                <span class="select-country">State</span>
+                <select name="state" id="stateSel" required>
+                    <option value="" selected="selected">Please Select State</option>
+                </select>
+            </div>
+            <!-- Section 8: District -->
+            <div class="select-country">
+                <span class="select-country">District</span>
+                <select name="district" id="districtSel" required>
+                    <option value="" selected="selected">Please Select District</option>
+                </select>
+            </div>
+            <!-- Section 9: Password -->
+            <div class="user-details">
+                <span class="details">Password</span>
+                <input type="password" id="password" name="password" placeholder="Type your password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+            </div>
+            <!-- Section 10: Address -->
+            <div class="user-details">
+                <span class="details">Address</span>
+                <input type="text" id="address" name="address" placeholder="Enter your full address" required>
+            </div>
+            <!-- Register Button -->
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+
+            <div class="container signin">
+                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
